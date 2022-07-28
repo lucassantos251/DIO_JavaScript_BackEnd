@@ -62,5 +62,27 @@ Como acessar dados numa lista com base no index
 
     LINDEX user1:hobbies 0
 
-Como acessar dados numa lista com base no
+Como acessar dados numa lista com base no intervalo de index
 
+    LRANGE user1:hobbies 0 1
+
+Consultar tipo de variáveis
+
+    TYPE user1:name
+    TYPE user1:hobbies
+
+Consultar o tempo de expiração em segundos
+
+    TTL user1:name
+
+Consultar o tempo de expiração em milisegundos
+
+    PTTL user1:name
+
+Definir persistência para um dado expirável
+
+    PERSIST user1:name
+
+Deletar um dado
+
+    DEL user1:name
