@@ -1,0 +1,3 @@
+# TRUNCATE
+
+"Esvazia" a tabela.
