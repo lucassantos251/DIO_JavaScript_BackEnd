@@ -5,7 +5,7 @@
    
 É recomendável que trabalhemos com relacionalmentos Embedding, mas também temos como trabalhar com Referência.
 
-Embedding:
+**Embedding**:
 - Documentos auto contido, todas as informações do documento relacionado está contido nele.
   
 ![embedding](img/chrome-22_22-07-28_14h44m.png)
@@ -17,7 +17,7 @@ Prós:
 Contras:
 - Limite de 16MB por documento.
 
-Referência:
+**Referência**:
 - Documentos com dependência de outros documentos ou collections.
 
 ![referencia](img/chrome-23_22-07-28_14h45m.png)
@@ -36,7 +36,7 @@ MongoDB não possui Foreign Key.
 
 Recomendações de acordo com os relacionamentos.
 
-One-to-one: prefira atributos chave-valor no documento
+**One-to-one**: prefira atributos chave-valor no documento
 
     {
       "_id": ObjectID("609aeec3aa1a68ca982b47d7"),
@@ -45,7 +45,7 @@ One-to-one: prefira atributos chave-valor no documento
       "number": 80
     }
 
-One-to-few: prefira embedding
+**One-to-few**: prefira embedding
 
     {
       "_id": ObjectID("609aeec3aa1a68ca982b47d7"),
@@ -56,7 +56,7 @@ One-to-few: prefira embedding
       ]
     }
 
-One-to-many e Many-to-many: prefira referência
+**One-to-many** e **Many-to-many**: prefira referência
 
     {
       "_id": ObjectID("609aeec3aa1a68ca982b47d7"),
@@ -80,4 +80,4 @@ One-to-many e Many-to-many: prefira referência
 
 ![use-cases](img/chrome-24_22-07-28_14h58m.png)
 
-https://www.mongodb.com/blog/post/building-with-patterns-a-summary
+https://www.mongodb.com/blog/post/building-with-patterns-a-summary/
