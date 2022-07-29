@@ -1,0 +1,86 @@
+{
+  "fields": [
+    {
+      "name": "_id",
+      "path": "_id",
+      "count": 4,
+      "types": [
+        {
+          "name": "ObjectID",
+          "bsonType": "ObjectID",
+          "path": "_id",
+          "count": 4,
+          "values": [
+            "62e2ef24b7e60955a6902019",
+            "62e2eec6b7e60955a6902018",
+            "62e2eec6b7e60955a6902017",
+            "62e2f523f65650fb8cc17958"
+          ],
+          "total_count": 0,
+          "probability": 1,
+          "unique": 4,
+          "has_duplicates": false
+        }
+      ],
+      "total_count": 4,
+      "type": "ObjectID",
+      "has_duplicates": false,
+      "probability": 1
+    },
+    {
+      "name": "age",
+      "path": "age",
+      "count": 4,
+      "types": [
+        {
+          "name": "Int32",
+          "bsonType": "Int32",
+          "path": "age",
+          "count": 4,
+          "values": [
+            5,
+            30,
+            40,
+            2
+          ],
+          "total_count": 0,
+          "probability": 1,
+          "unique": 4,
+          "has_duplicates": false
+        }
+      ],
+      "total_count": 4,
+      "type": "Int32",
+      "has_duplicates": false,
+      "probability": 1
+    },
+    {
+      "name": "name",
+      "path": "name",
+      "count": 4,
+      "types": [
+        {
+          "name": "String",
+          "bsonType": "String",
+          "path": "name",
+          "count": 4,
+          "values": [
+            "Ingrid",
+            "Gabrielli",
+            "Lucas",
+            "Haru"
+          ],
+          "total_count": 0,
+          "probability": 1,
+          "unique": 4,
+          "has_duplicates": false
+        }
+      ],
+      "total_count": 4,
+      "type": "String",
+      "has_duplicates": false,
+      "probability": 1
+    }
+  ],
+  "count": 4
+}
