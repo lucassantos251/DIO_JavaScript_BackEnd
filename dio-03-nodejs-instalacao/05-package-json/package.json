@@ -1,0 +1,15 @@
+{
+  "name": "programa",
+  "version": "1.0.0",
+  "description": "descrição do projeto",
+  "main": "index.js",
+  "scripts": {
+    "index": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "teste"
+  ],
+  "author": "Lucas",
+  "license": "ISC"
+}
