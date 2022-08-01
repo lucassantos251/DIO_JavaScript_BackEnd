@@ -10,3 +10,5 @@ Conhecer a estrutura do Node com JS, entender sua utilidade, fazer o deploy de u
 4. Jest
 5. Padrão AAA
 6. Mocks e testes unitários
+
+https://github.com/nathyts/dio-node-jest
