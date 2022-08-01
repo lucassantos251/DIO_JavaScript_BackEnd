@@ -4,9 +4,19 @@ import { UserService } from '../services/UserService'
 export class UserController {
   async createUser (request: Request, response: Response): Promise<Response> {
     const { name, email } = request.body
-
-    if(name.length < 1 || email.length < 1) {
-      return response.status(400)
+    
+    if(name.length < 1 && email.length < 1) {
+      return response.status(400).json({
+        "message": "O nome e email não podem ser vazios"
+      })
+    } else if(name.length < 1) {
+      return response.status(400).json({
+        "message": "O nome não pode ser vazio"
+      })
+    } else if (email.length < 1) {
+      return response.status(400).json({
+        "message": "O email não pode ser vazio"
+      })
     }
 
     const userService = new UserService({ name, email })

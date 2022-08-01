@@ -1,0 +1,3 @@
+# Testes E2E
+
+São testes que passam por toda a aplicação. Testamos a conexão com a API, cadastro no banco de dados e todas as respostas esperadas.
