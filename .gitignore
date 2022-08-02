@@ -1,4 +1,7 @@
 node_modules
+packages
 cache
 dist
 build
+*.zip
+*.rar
