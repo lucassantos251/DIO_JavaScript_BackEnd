@@ -1,5 +1,5 @@
 import express from 'express'
-import basicAuthenticationMiddleware from './middlewares/basic-authentication.middleware'
+import jwtAuthenticationMiddleware from './middlewares/jwt-authentication.middleware'
 import errorHandler from './middlewares/error-handler.middleware'
 import authorizationRoute from './routes/authorization.routes'
 import statusRoute from './routes/status.routes'
@@ -13,8 +13,10 @@ app.use(express.urlencoded({ extended: true }))
 
 
 app.use(statusRoute)
-app.use(usersRoute)
 app.use(authorizationRoute)
+
+app.use(jwtAuthenticationMiddleware)
+app.use(usersRoute)
 
 app.use(errorHandler)
 
