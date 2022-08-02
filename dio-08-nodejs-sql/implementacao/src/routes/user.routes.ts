@@ -1,5 +1,6 @@
 import { NextFunction, Request, Response, Router } from "express";
 import { StatusCodes } from 'http-status-codes';
+import { send } from "process";
 import userRepository from "../repositories/user.repository";
 
 const usersRoute = Router()
@@ -21,17 +22,19 @@ usersRoute.post('/users', async (req: Request, res: Response, next: NextFunction
   res.status(StatusCodes.CREATED).send(uuid)
 })
 
-usersRoute.put('/users/:uuid', (req: Request<{ uuid: string }>, res: Response, next: NextFunction) => {
+usersRoute.put('/users/:uuid', async (req: Request<{ uuid: string }>, res: Response, next: NextFunction) => {
   const uuid = req.params.uuid
   const modifiedUser = req.body
 
   modifiedUser.uuid = uuid;
-  res.status(StatusCodes.OK).send(modifiedUser)
+  await userRepository.updateUser(modifiedUser)
+  res.status(StatusCodes.OK).send({"message": "Updated"})
 })
 
-usersRoute.delete('/users/:uuid', (req: Request<{ uuid: string }>, res: Response, next: NextFunction) => {
+usersRoute.delete('/users/:uuid', async (req: Request<{ uuid: string }>, res: Response, next: NextFunction) => {
   const uuid = req.params.uuid
-  res.status(StatusCodes.OK)
+  await userRepository.removeUser(uuid)
+  res.status(StatusCodes.OK).send({"message": "Deleted"})
 })
 
 export default usersRoute;
