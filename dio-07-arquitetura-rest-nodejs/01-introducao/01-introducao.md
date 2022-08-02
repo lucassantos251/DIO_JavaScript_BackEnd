@@ -38,3 +38,6 @@ A idéia é criar um micro-serviço de autenticação. Gerenciar o cadastro do u
 - Node.js
 - Typescript
 - Express
+- HTTP Status Code
+
+https://github.com/RenanJPaula/dio-node-user-authentication-api
